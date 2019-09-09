@@ -1,0 +1,231 @@
+2019-09-08 00:59:12,274 INFO  [main] master.HMaster: STARTING service HMaster
+2019-09-08 00:59:12,278 INFO  [main] util.VersionInfo: HBase 2.1.2
+2019-09-08 00:59:12,278 INFO  [main] util.VersionInfo: Source code repository git://kalashnikov/Users/stack/checkouts/hbase.git revision=1dfc418f77801fbfb59a125756891b9100c1fc6d
+2019-09-08 00:59:12,279 INFO  [main] util.VersionInfo: Compiled by stack on Sun Dec 30 21:45:09 PST 2018
+2019-09-08 00:59:12,279 INFO  [main] util.VersionInfo: From source with checksum 5701bcce2fc4832a4b2990adc735b516
+2019-09-08 00:59:15,785 INFO  [main] master.HMasterCommandLine: Starting a zookeeper cluster
+2019-09-08 00:59:16,196 INFO  [main] server.ZooKeeperServer: Server environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+2019-09-08 00:59:16,196 INFO  [main] server.ZooKeeperServer: Server environment:host.name=hbase-docker
+2019-09-08 00:59:16,196 INFO  [main] server.ZooKeeperServer: Server environment:java.version=1.8.0_191
+2019-09-08 00:59:16,196 INFO  [main] server.ZooKeeperServer: Server environment:java.vendor=Oracle Corporation
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: 30121.jar:/opt/hbase/bin/../lib/osgi-resource-locator-1.0.1.jar:/opt/hbase/bin/../lib/paranamer-2.3.jar:/opt/hbase/bin/../lib/protobuf-java-2.5.0.jar:/opt/hbase/bin/../lib/snappy-java-1.0.5.jar:/opt/hbase/bin/../lib/spymemcached-2.12.2.jar:/opt/hbase/bin/../lib/validation-api-1.1.0.Final.jar:/opt/hbase/bin/../lib/xmlenc-0.52.jar:/opt/hbase/bin/../lib/xz-1.0.jar:/opt/hbase/bin/../lib/zookeeper-3.4.10.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/audience-annotations-0.5.0.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/commons-logging-1.2.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/findbugs-annotations-1.3.9-1.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/htrace-core4-4.2.0-incubating.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/log4j-1.2.17.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/slf4j-api-1.7.25.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/htrace-core-3.1.0-incubating.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/slf4j-log4j12-1.7.25.jar
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:java.io.tmpdir=/tmp
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:java.compiler=<NA>
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:os.name=Linux
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:os.arch=amd64
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:os.version=4.9.0-4-amd64
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:user.name=root
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:user.home=/root
+2019-09-08 00:59:16,197 INFO  [main] server.ZooKeeperServer: Server environment:user.dir=/
+2019-09-08 00:59:16,371 INFO  [main] server.ZooKeeperServer: Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /tmp/hbase-root/zookeeper/zookeeper_0/version-2 snapdir /tmp/hbase-root/zookeeper/zookeeper_0/version-2
+2019-09-08 00:59:16,371 INFO  [main] server.ZooKeeperServer: minSessionTimeout set to -1
+2019-09-08 00:59:16,371 INFO  [main] server.ZooKeeperServer: maxSessionTimeout set to -1
+2019-09-08 00:59:16,568 INFO  [main] server.NIOServerCnxnFactory: binding to port 0.0.0.0/0.0.0.0:2181
+2019-09-08 00:59:18,278 ERROR [main] server.ZooKeeperServer: ZKShutdownHandler is not registered, so ZooKeeper server won't take any action on ERROR or SHUTDOWN server state changes
+2019-09-08 00:59:18,338 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /127.0.0.1:59410
+2019-09-08 00:59:18,443 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ServerCnxn: The list of known four letter word commands is : [{1936881266=srvr, 1937006964=stat, 2003003491=wchc, 1685417328=dump, 1668445044=crst, 1936880500=srst, 1701738089=envi, 1668247142=conf, 2003003507=wchs, 2003003504=wchp, 1668247155=cons, 1835955314=mntr, 1769173615=isro, 1920298859=ruok, 1735683435=gtmk, 1937010027=stmk}]
+2019-09-08 00:59:18,455 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ServerCnxn: The list of enabled four letter word commands is : [[wchs, stat, wchp, stmk, conf, ruok, mntr, srvr, wchc, envi, srst, isro, dump, gtmk, crst, cons]]
+2019-09-08 00:59:18,456 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Processing stat command from /127.0.0.1:59410
+2019-09-08 00:59:18,504 INFO  [Thread-2] server.NIOServerCnxn: Stat command output
+2019-09-08 00:59:18,508 INFO  [main] zookeeper.MiniZooKeeperCluster: Started MiniZooKeeperCluster and ran successful 'stat' on client port=2181
+2019-09-08 00:59:18,508 INFO  [main] master.HMasterCommandLine: Starting up instance of localHBaseCluster; master=1, regionserversCount=1
+2019-09-08 00:59:18,515 INFO  [Thread-2] server.NIOServerCnxn: Closed socket connection for client /127.0.0.1:59410 (no session established for client)
+2019-09-08 00:59:21,972 INFO  [main] metrics.MetricRegistries: Loaded MetricRegistries class org.apache.hadoop.hbase.metrics.impl.MetricRegistriesImpl
+2019-09-08 00:59:22,196 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2019-09-08 00:59:27,149 INFO  [main] regionserver.RSRpcServices: master/hbase-docker:16000 server-side Connection retries=45
+2019-09-08 00:59:27,501 INFO  [main] ipc.RpcExecutor: Instantiated default.FPBQ.Fifo with queueClass=class java.util.concurrent.LinkedBlockingQueue; numCallQueues=3, maxQueueLength=300, handlerCount=30
+2019-09-08 00:59:27,512 INFO  [main] ipc.RpcExecutor: Instantiated priority.FPBQ.Fifo with queueClass=class java.util.concurrent.LinkedBlockingQueue; numCallQueues=2, maxQueueLength=300, handlerCount=20
+2019-09-08 00:59:27,513 INFO  [main] ipc.RpcExecutor: Instantiated replication.FPBQ.Fifo with queueClass=class java.util.concurrent.LinkedBlockingQueue; numCallQueues=1, maxQueueLength=300, handlerCount=3
+2019-09-08 00:59:28,005 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x16d0e51cc3c0000, timeout of 10000ms exceeded
+2019-09-08 00:59:28,005 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x16d0e51cc3c0004, timeout of 10000ms exceeded
+2019-09-08 00:59:28,013 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x16d0e51cc3c0000
+2019-09-08 00:59:28,014 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x16d0e51cc3c0004
+2019-09-08 00:59:28,014 INFO  [SyncThread:0] persistence.FileTxnLog: Creating new log file: log.5c
+2019-09-08 00:59:28,502 INFO  [main] ipc.RpcServerFactory: Creating org.apache.hadoop.hbase.ipc.NettyRpcServer hosting hbase.pb.MasterService, hbase.pb.RegionServerStatusService, hbase.pb.LockService, hbase.pb.HbckService, hbase.pb.ClientService, hbase.pb.AdminService
+2019-09-08 00:59:31,344 INFO  [main] ipc.NettyRpcServer: Bind to /172.17.0.2:16000
+2019-09-08 00:59:31,642 INFO  [main] hfile.CacheConfig: Created cacheConfig: CacheConfig:disabled
+2019-09-08 00:59:31,643 INFO  [main] hfile.CacheConfig: Created cacheConfig: CacheConfig:disabled
+2019-09-08 00:59:33,721 INFO  [main] zookeeper.RecoverableZooKeeper: Process identifier=master:16000 connecting to ZooKeeper ensemble=hbase-docker:2181
+2019-09-08 00:59:33,816 INFO  [main] zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+2019-09-08 00:59:33,816 INFO  [main] zookeeper.ZooKeeper: Client environment:host.name=hbase-docker
+2019-09-08 00:59:33,818 INFO  [main] zookeeper.ZooKeeper: Client environment:java.version=1.8.0_191
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: 30121.jar:/opt/hbase/bin/../lib/osgi-resource-locator-1.0.1.jar:/opt/hbase/bin/../lib/paranamer-2.3.jar:/opt/hbase/bin/../lib/protobuf-java-2.5.0.jar:/opt/hbase/bin/../lib/snappy-java-1.0.5.jar:/opt/hbase/bin/../lib/spymemcached-2.12.2.jar:/opt/hbase/bin/../lib/validation-api-1.1.0.Final.jar:/opt/hbase/bin/../lib/xmlenc-0.52.jar:/opt/hbase/bin/../lib/xz-1.0.jar:/opt/hbase/bin/../lib/zookeeper-3.4.10.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/audience-annotations-0.5.0.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/commons-logging-1.2.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/findbugs-annotations-1.3.9-1.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/htrace-core4-4.2.0-incubating.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/log4j-1.2.17.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/slf4j-api-1.7.25.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/htrace-core-3.1.0-incubating.jar:/opt/hbase/bin/../lib/client-facing-thirdparty/slf4j-log4j12-1.7.25.jar
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:os.name=Linux
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:os.arch=amd64
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:os.version=4.9.0-4-amd64
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:user.name=root
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:user.home=/root
+2019-09-08 00:59:33,819 INFO  [main] zookeeper.ZooKeeper: Client environment:user.dir=/
+2019-09-08 00:59:33,823 INFO  [main] zookeeper.ZooKeeper: Initiating client connection, connectString=hbase-docker:2181 sessionTimeout=10000 watcher=org.apache.hadoop.hbase.zookeeper.PendingWatcher@1a1ed4e5
+2019-09-08 00:59:34,064 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-08 00:59:34,068 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:56566
+2019-09-08 00:59:34,069 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2019-09-08 00:59:34,081 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to establish new session at /172.17.0.2:56566
+2019-09-08 00:59:34,122 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session establishment complete on server hbase-docker/172.17.0.2:2181, sessionid = 0x16d0e61da8a0000, negotiated timeout = 10000
+2019-09-08 00:59:34,129 INFO  [SyncThread:0] server.ZooKeeperServer: Established session 0x16d0e61da8a0000 with negotiated timeout 10000 for client /172.17.0.2:56566
+2019-09-08 00:59:34,159 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Got user-level KeeperException when processing sessionid:0x16d0e61da8a0000 type:create cxid:0x1 zxid:0x5f txntype:-1 reqpath:n/a Error Path:/hbase Error:KeeperErrorCode = NodeExists for /hbase
+2019-09-08 00:59:34,771 INFO  [main] util.log: Logging initialized @27933ms
+2019-09-08 00:59:35,157 INFO  [main] http.HttpRequestLog: Http request log for http.requests.master is not defined
+2019-09-08 00:59:35,225 INFO  [main] http.HttpServer: Added global filter 'safety' (class=org.apache.hadoop.hbase.http.HttpServer$QuotingInputFilter)
+2019-09-08 00:59:35,229 INFO  [main] http.HttpServer: Added global filter 'clickjackingprevention' (class=org.apache.hadoop.hbase.http.ClickjackingPreventionFilter)
+2019-09-08 00:59:35,240 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context master
+2019-09-08 00:59:35,241 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2019-09-08 00:59:35,242 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2019-09-08 00:59:35,420 INFO  [main] http.HttpServer: Jetty bound to port 16010
+2019-09-08 00:59:35,437 INFO  [main] server.Server: jetty-9.3.19.v20170502
+2019-09-08 00:59:35,681 INFO  [main] handler.ContextHandler: Started o.e.j.s.ServletContextHandler@12db3386{/logs,file:///opt/hbase/logs/,AVAILABLE}
+2019-09-08 00:59:35,685 INFO  [main] handler.ContextHandler: Started o.e.j.s.ServletContextHandler@79a1728c{/static,file:///opt/hbase/hbase-webapps/static/,AVAILABLE}
+2019-09-08 00:59:37,166 INFO  [main] handler.ContextHandler: Started o.e.j.w.WebAppContext@4074023c{/,file:///opt/hbase/hbase-webapps/master/,AVAILABLE}{file:/opt/hbase/hbase-webapps/master}
+2019-09-08 00:59:37,204 INFO  [main] server.AbstractConnector: Started ServerConnector@534ae3d3{HTTP/1.1,[http/1.1]}{hbase-docker:16010}
+2019-09-08 00:59:37,216 INFO  [main] server.Server: Started @30378ms
+2019-09-08 00:59:37,260 INFO  [main] master.HMaster: hbase.rootdir=file:/data/hbase, hbase.cluster.distributed=false
+2019-09-08 00:59:37,565 INFO  [main] regionserver.RSRpcServices: regionserver/hbase-docker:16020 server-side Connection retries=45
+2019-09-08 00:59:37,565 INFO  [main] ipc.RpcExecutor: Instantiated default.FPBQ.Fifo with queueClass=class java.util.concurrent.LinkedBlockingQueue; numCallQueues=3, maxQueueLength=300, handlerCount=30
+2019-09-08 00:59:37,565 INFO  [main] ipc.RpcExecutor: Instantiated priority.FPBQ.Fifo with queueClass=class java.util.concurrent.LinkedBlockingQueue; numCallQueues=2, maxQueueLength=300, handlerCount=20
+2019-09-08 00:59:37,565 INFO  [main] ipc.RpcExecutor: Instantiated replication.FPBQ.Fifo with queueClass=class java.util.concurrent.LinkedBlockingQueue; numCallQueues=1, maxQueueLength=300, handlerCount=3
+2019-09-08 00:59:37,594 INFO  [main] ipc.RpcServerFactory: Creating org.apache.hadoop.hbase.ipc.NettyRpcServer hosting hbase.pb.ClientService, hbase.pb.AdminService
+2019-09-08 00:59:37,632 INFO  [main] io.ByteBufferPool: Created with bufferSize=64 KB and maxPoolSize=1.88 KB
+2019-09-08 00:59:37,651 INFO  [main] ipc.NettyRpcServer: Bind to /172.17.0.2:16020
+2019-09-08 00:59:37,659 INFO  [main] hfile.CacheConfig: Allocating onheap LruBlockCache size=388.55 MB, blockSize=64 KB
+2019-09-08 00:59:37,809 INFO  [main] hfile.CacheConfig: Created cacheConfig: blockCache=LruBlockCache{blockCount=0, currentSize=292.42 KB, freeSize=388.26 MB, maxSize=388.55 MB, heapSize=292.42 KB, minSize=369.12 MB, minFactor=0.95, multiSize=184.56 MB, multiFactor=0.5, singleSize=92.28 MB, singleFactor=0.25}, cacheDataOnRead=true, cacheDataOnWrite=false, cacheIndexesOnWrite=false, cacheBloomsOnWrite=false, cacheEvictOnClose=false, cacheDataCompressed=false, prefetchOnOpen=false
+2019-09-08 00:59:37,819 INFO  [main] hfile.CacheConfig: Created cacheConfig: blockCache=LruBlockCache{blockCount=0, currentSize=292.42 KB, freeSize=388.26 MB, maxSize=388.55 MB, heapSize=292.42 KB, minSize=369.12 MB, minFactor=0.95, multiSize=184.56 MB, multiFactor=0.5, singleSize=92.28 MB, singleFactor=0.25}, cacheDataOnRead=true, cacheDataOnWrite=false, cacheIndexesOnWrite=false, cacheBloomsOnWrite=false, cacheEvictOnClose=false, cacheDataCompressed=false, prefetchOnOpen=false
+2019-09-08 00:59:37,830 INFO  [main] zookeeper.RecoverableZooKeeper: Process identifier=regionserver:16020 connecting to ZooKeeper ensemble=hbase-docker:2181
+2019-09-08 00:59:37,830 INFO  [main] zookeeper.ZooKeeper: Initiating client connection, connectString=hbase-docker:2181 sessionTimeout=10000 watcher=org.apache.hadoop.hbase.zookeeper.PendingWatcher@5177e388
+2019-09-08 00:59:37,844 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-08 00:59:37,846 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:56568
+2019-09-08 00:59:37,846 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2019-09-08 00:59:37,847 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to establish new session at /172.17.0.2:56568
+2019-09-08 00:59:37,877 INFO  [SyncThread:0] server.ZooKeeperServer: Established session 0x16d0e61da8a0001 with negotiated timeout 10000 for client /172.17.0.2:56568
+2019-09-08 00:59:37,877 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session establishment complete on server hbase-docker/172.17.0.2:2181, sessionid = 0x16d0e61da8a0001, negotiated timeout = 10000
+2019-09-08 00:59:37,985 INFO  [main] http.HttpRequestLog: Http request log for http.requests.regionserver is not defined
+2019-09-08 00:59:37,986 INFO  [main] http.HttpServer: Added global filter 'safety' (class=org.apache.hadoop.hbase.http.HttpServer$QuotingInputFilter)
+2019-09-08 00:59:37,986 INFO  [main] http.HttpServer: Added global filter 'clickjackingprevention' (class=org.apache.hadoop.hbase.http.ClickjackingPreventionFilter)
+2019-09-08 00:59:37,989 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context regionserver
+2019-09-08 00:59:37,990 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2019-09-08 00:59:37,990 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2019-09-08 00:59:38,012 INFO  [main] http.HttpServer: Jetty bound to port 16030
+2019-09-08 00:59:38,012 INFO  [main] server.Server: jetty-9.3.19.v20170502
+2019-09-08 00:59:38,015 INFO  [main] handler.ContextHandler: Started o.e.j.s.ServletContextHandler@7d37f1c{/logs,file:///opt/hbase/logs/,AVAILABLE}
+2019-09-08 00:59:38,016 INFO  [main] handler.ContextHandler: Started o.e.j.s.ServletContextHandler@3162743f{/static,file:///opt/hbase/hbase-webapps/static/,AVAILABLE}
+2019-09-08 00:59:38,556 INFO  [main] handler.ContextHandler: Started o.e.j.w.WebAppContext@1a28aef1{/,file:///opt/hbase/hbase-webapps/regionserver/,AVAILABLE}{file:/opt/hbase/hbase-webapps/regionserver}
+2019-09-08 00:59:38,557 INFO  [main] server.AbstractConnector: Started ServerConnector@8032ab3{HTTP/1.1,[http/1.1]}{hbase-docker:16030}
+2019-09-08 00:59:38,558 INFO  [main] server.Server: Started @31720ms
+2019-09-08 00:59:38,652 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: Adding backup master ZNode /hbase/backup-masters/hbase-docker,16000,1567904358937
+2019-09-08 00:59:39,329 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ActiveMasterManager: Deleting ZNode for /hbase/backup-masters/hbase-docker,16000,1567904358937 from backup master directory
+2019-09-08 00:59:39,401 WARN  [master/hbase-docker:16000:becomeActiveMaster] hbase.ZNodeClearer: Environment variable HBASE_ZNODE_FILE not set; znodes will not be cleared on crash by start scripts (Longer MTTR!)
+2019-09-08 00:59:39,402 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ActiveMasterManager: Registered as active master=hbase-docker,16000,1567904358937
+2019-09-08 00:59:39,446 INFO  [M:0;hbase-docker:16000] regionserver.HRegionServer: ClusterId : 980375e9-1563-47b9-bd31-63af9c1f49ad
+2019-09-08 00:59:41,573 INFO  [master/hbase-docker:16000:becomeActiveMaster] coordination.SplitLogManagerCoordination: Found 0 orphan tasks and 0 rescan nodes
+2019-09-08 00:59:42,057 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x7399f925] zookeeper.ZooKeeper: Initiating client connection, connectString=hbase-docker:2181 sessionTimeout=10000 watcher=org.apache.hadoop.hbase.zookeeper.ReadOnlyZKClient$$Lambda$58/1054118640@7bd60b4e
+2019-09-08 00:59:42,084 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x7399f925-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-08 00:59:42,088 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:56570
+2019-09-08 00:59:42,089 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x7399f925-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2019-09-08 00:59:42,091 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to establish new session at /172.17.0.2:56570
+2019-09-08 00:59:42,114 INFO  [SyncThread:0] server.ZooKeeperServer: Established session 0x16d0e61da8a0002 with negotiated timeout 10000 for client /172.17.0.2:56570
+2019-09-08 00:59:42,114 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x7399f925-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session establishment complete on server hbase-docker/172.17.0.2:2181, sessionid = 0x16d0e61da8a0002, negotiated timeout = 10000
+2019-09-08 00:59:42,515 INFO  [master/hbase-docker:16000:becomeActiveMaster] procedure2.ProcedureExecutor: Starting 16 core workers (bigger of cpus/4 or 16) with max (burst) worker count=160, start 1 urgent thread(s)
+2019-09-08 00:59:42,567 WARN  [master/hbase-docker:16000:becomeActiveMaster] wal.WALProcedureStore: Remove uninitialized log: DeprecatedRawLocalFileStatus{path=file:/data/hbase/MasterProcWALs/pv2-00000000000000000001.log; isDirectory=false; length=0; replication=1; blocksize=33554432; modification_time=1567903350000; access_time=0; owner=; group=; permission=rw-rw-rw-; isSymlink=false}
+2019-09-08 00:59:42,567 INFO  [master/hbase-docker:16000:becomeActiveMaster] wal.ProcedureWALFile: Archiving file:/data/hbase/MasterProcWALs/pv2-00000000000000000001.log to file:/data/hbase/oldWALs/pv2-00000000000000000001.log
+2019-09-08 00:59:42,664 WARN  [master/hbase-docker:16000:becomeActiveMaster] util.CommonFSUtils: Your Hadoop installation does not include the StreamCapabilities class from HDFS-11644, so we will skip checking if any FSDataOutputStreams actually support hflush/hsync. If you are running on top of HDFS this probably just means you have an older version and this can be ignored. If you are running on top of an alternate FileSystem implementation you should manually verify that hflush and hsync are implemented; otherwise you risk data loss and hard to diagnose errors when our assumptions are violated.
+2019-09-08 00:59:42,672 INFO  [master/hbase-docker:16000:becomeActiveMaster] wal.WALProcedureStore: Rolled new Procedure Store WAL, id=2
+2019-09-08 00:59:42,673 INFO  [master/hbase-docker:16000:becomeActiveMaster] procedure2.ProcedureExecutor: Recovered WALProcedureStore lease in 136msec
+2019-09-08 00:59:42,681 INFO  [master/hbase-docker:16000:becomeActiveMaster] procedure2.ProcedureExecutor: Loaded WALProcedureStore in 7msec
+2019-09-08 00:59:42,681 INFO  [master/hbase-docker:16000:becomeActiveMaster] procedure2.RemoteProcedureDispatcher: Instantiated, coreThreads=128 (allowCoreThreadTimeOut=true), queueMaxSize=32, operationDelay=150
+2019-09-08 00:59:43,136 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.RegionServerTracker: Starting RegionServerTracker; 0 have existing ServerCrashProcedures, 1 possibly 'live' servers, and 0 'splitting'.
+2019-09-08 00:59:43,148 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ServerManager: Expiration called on hbase-docker,16020,1567903343904 but NOT online
+2019-09-08 00:59:43,148 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ServerManager: Processing expiration of hbase-docker,16020,1567903343904 on hbase-docker,16000,1567904358937
+2019-09-08 00:59:43,616 INFO  [master/hbase-docker:16000:becomeActiveMaster] balancer.BaseLoadBalancer: slop=0.001, systemTablesOnMaster=false
+2019-09-08 00:59:43,643 INFO  [master/hbase-docker:16000:becomeActiveMaster] balancer.StochasticLoadBalancer: Loaded config; maxSteps=1000000, stepsPerRegion=800, maxRunningTime=30000, isByTable=false, etc.
+2019-09-08 00:59:43,740 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: Active/primary master=hbase-docker,16000,1567904358937, sessionid=0x16d0e61da8a0000, setting cluster-up flag (Was=true)
+2019-09-08 00:59:43,813 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Got user-level KeeperException when processing sessionid:0x16d0e61da8a0000 type:create cxid:0x22 zxid:0x66 txntype:-1 reqpath:n/a Error Path:/hbase/flush-table-proc/acquired Error:KeeperErrorCode = NodeExists for /hbase/flush-table-proc/acquired
+2019-09-08 00:59:43,849 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Got user-level KeeperException when processing sessionid:0x16d0e61da8a0000 type:create cxid:0x28 zxid:0x67 txntype:-1 reqpath:n/a Error Path:/hbase/online-snapshot/acquired Error:KeeperErrorCode = NodeExists for /hbase/online-snapshot/acquired
+2019-09-08 00:59:43,922 INFO  [RS:0;hbase-docker:16020] regionserver.HRegionServer: ClusterId : 980375e9-1563-47b9-bd31-63af9c1f49ad
+2019-09-08 00:59:43,991 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Got user-level KeeperException when processing sessionid:0x16d0e61da8a0001 type:create cxid:0x7 zxid:0x68 txntype:-1 reqpath:n/a Error Path:/hbase/flush-table-proc/acquired Error:KeeperErrorCode = NodeExists for /hbase/flush-table-proc/acquired
+2019-09-08 00:59:44,037 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Got user-level KeeperException when processing sessionid:0x16d0e61da8a0001 type:create cxid:0xa zxid:0x69 txntype:-1 reqpath:n/a Error Path:/hbase/online-snapshot/acquired Error:KeeperErrorCode = NodeExists for /hbase/online-snapshot/acquired
+2019-09-08 00:59:44,065 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x1e7842ad] zookeeper.ZooKeeper: Initiating client connection, connectString=hbase-docker:2181 sessionTimeout=10000 watcher=org.apache.hadoop.hbase.zookeeper.ReadOnlyZKClient$$Lambda$58/1054118640@7bd60b4e
+2019-09-08 00:59:44,068 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x1e7842ad-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-08 00:59:44,069 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x1e7842ad-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2019-09-08 00:59:44,069 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:56572
+2019-09-08 00:59:44,075 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to establish new session at /172.17.0.2:56572
+2019-09-08 00:59:44,081 INFO  [SyncThread:0] server.ZooKeeperServer: Established session 0x16d0e61da8a0003 with negotiated timeout 10000 for client /172.17.0.2:56572
+2019-09-08 00:59:44,081 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x1e7842ad-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session establishment complete on server hbase-docker/172.17.0.2:2181, sessionid = 0x16d0e61da8a0003, negotiated timeout = 10000
+2019-09-08 00:59:44,170 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta {1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}
+2019-09-08 00:59:44,177 INFO  [RS:0;hbase-docker:16020] regionserver.RegionServerCoprocessorHost: System coprocessor loading is enabled
+2019-09-08 00:59:44,177 INFO  [RS:0;hbase-docker:16020] regionserver.RegionServerCoprocessorHost: Table coprocessor loading is enabled
+2019-09-08 00:59:44,190 INFO  [RS:0;hbase-docker:16020] regionserver.HRegionServer: reportForDuty to master=hbase-docker,16000,1567904358937 with port=16020, startcode=1567904377562
+2019-09-08 00:59:44,238 INFO  [master/hbase-docker:16000:becomeActiveMaster] procedure2.TimeoutExecutorThread: ADDED pid=-1, state=WAITING_TIMEOUT; org.apache.hadoop.hbase.procedure2.CompletedProcedureCleaner; timeout=30000, timestamp=1567904414237
+2019-09-08 00:59:44,275 INFO  [PEWorker-1] procedure.ServerCrashProcedure: Start pid=1, state=RUNNABLE:SERVER_CRASH_START, locked=true; ServerCrashProcedure server=hbase-docker,16020,1567903343904, splitWal=true, meta=false
+2019-09-08 00:59:44,275 INFO  [master/hbase-docker:16000:becomeActiveMaster] cleaner.CleanerChore: Cleaner pool size is 1
+2019-09-08 00:59:44,281 INFO  [master/hbase-docker:16000:becomeActiveMaster] zookeeper.RecoverableZooKeeper: Process identifier=replicationLogCleaner connecting to ZooKeeper ensemble=hbase-docker:2181
+2019-09-08 00:59:44,286 INFO  [master/hbase-docker:16000:becomeActiveMaster] zookeeper.ZooKeeper: Initiating client connection, connectString=hbase-docker:2181 sessionTimeout=10000 watcher=org.apache.hadoop.hbase.zookeeper.PendingWatcher@75ff7029
+2019-09-08 00:59:44,294 INFO  [master/hbase-docker:16000:becomeActiveMaster] cleaner.LogCleaner: Creating OldWALs cleaners with size=2
+2019-09-08 00:59:44,296 INFO  [master/hbase-docker:16000:becomeActiveMaster-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2019-09-08 00:59:44,296 INFO  [master/hbase-docker:16000:becomeActiveMaster-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2019-09-08 00:59:44,297 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:56574
+2019-09-08 00:59:44,297 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to establish new session at /172.17.0.2:56574
+2019-09-08 00:59:44,314 INFO  [SyncThread:0] server.ZooKeeperServer: Established session 0x16d0e61da8a0004 with negotiated timeout 10000 for client /172.17.0.2:56574
+2019-09-08 00:59:44,314 INFO  [master/hbase-docker:16000:becomeActiveMaster-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session establishment complete on server hbase-docker/172.17.0.2:2181, sessionid = 0x16d0e61da8a0004, negotiated timeout = 10000
+2019-09-08 00:59:44,367 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: Master startup: status=Wait for region servers to report in, state=RUNNING, startTime=1567904379258, completionTime=-1
+2019-09-08 00:59:44,376 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ServerManager: Waiting on regionserver count=0; waited=0ms, expecting min=1 server(s), max=NO_LIMIT server(s), timeout=4500ms, lastChange=0ms
+2019-09-08 00:59:44,888 INFO  [RpcServer.default.FPBQ.Fifo.handler=29,queue=2,port=16000] master.ServerManager: Registering regionserver=hbase-docker,16020,1567904377562
+2019-09-08 00:59:44,931 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ServerManager: Waiting on regionserver count=1; waited=554ms, expecting min=1 server(s), max=NO_LIMIT server(s), timeout=4500ms, lastChange=0ms
+2019-09-08 00:59:45,028 WARN  [RS:0;hbase-docker:16020] hbase.ZNodeClearer: Environment variable HBASE_ZNODE_FILE not set; znodes will not be cleared on crash by start scripts (Longer MTTR!)
+2019-09-08 00:59:45,033 INFO  [RegionServerTracker-0] master.RegionServerTracker: RegionServer ephemeral node created, adding [hbase-docker,16020,1567904377562]
+2019-09-08 00:59:46,445 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ServerManager: Waiting on regionserver count=1; waited=2069ms, expecting min=1 server(s), max=NO_LIMIT server(s), timeout=4500ms, lastChange=-1515ms
+2019-09-08 00:59:47,213 INFO  [RS:0;hbase-docker:16020] wal.WALFactory: Instantiating WALProvider of type class org.apache.hadoop.hbase.wal.AsyncFSWALProvider
+2019-09-08 00:59:47,287 INFO  [RS:0;hbase-docker:16020] regionserver.MetricsRegionServerWrapperImpl: Computing regionserver metrics every 5000 milliseconds
+2019-09-08 00:59:47,374 INFO  [RS:0;hbase-docker:16020] regionserver.MemStoreFlusher: globalMemStoreLimit=388.6 M, globalMemStoreLimitLowMark=369.1 M, Offheap=false
+2019-09-08 00:59:47,410 INFO  [RS:0;hbase-docker:16020] throttle.PressureAwareCompactionThroughputController: Compaction throughput configurations, higher bound: 20.00 MB/second, lower bound 10.00 MB/second, off peak: unlimited, tuning period: 60000 ms
+2019-09-08 00:59:47,442 INFO  [RS:0;hbase-docker:16020] regionserver.HRegionServer: CompactionChecker runs every PT10S
+2019-09-08 00:59:47,600 INFO  [SplitLogWorker-hbase-docker:16020] regionserver.SplitLogWorker: SplitLogWorker hbase-docker,16020,1567904377562 starting
+2019-09-08 00:59:47,613 INFO  [RS:0;hbase-docker:16020] regionserver.HeapMemoryManager: Starting, tuneOn=false
+2019-09-08 00:59:47,662 INFO  [RS:0;hbase-docker:16020] regionserver.ChunkCreator: Allocating data MemStoreChunkPool with chunk size 2 MB, max count 174, initial count 0
+2019-09-08 00:59:47,670 INFO  [RS:0;hbase-docker:16020] regionserver.ChunkCreator: Allocating index MemStoreChunkPool with chunk size 204.80 KB, max count 194, initial count 0
+2019-09-08 00:59:47,752 INFO  [RS:0;hbase-docker:16020] regionserver.HRegionServer: Serving as hbase-docker,16020,1567904377562, RpcServer on hbase-docker/172.17.0.2:16020, sessionid=0x16d0e61da8a0001
+2019-09-08 00:59:47,762 INFO  [RS:0;hbase-docker:16020] quotas.RegionServerRpcQuotaManager: Quota support disabled
+2019-09-08 00:59:47,762 INFO  [RS:0;hbase-docker:16020] quotas.RegionServerSpaceQuotaManager: Quota support disabled, not starting space quota manager.
+2019-09-08 00:59:47,951 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ServerManager: Waiting on regionserver count=1; waited=3575ms, expecting min=1 server(s), max=NO_LIMIT server(s), timeout=4500ms, lastChange=-3021ms
+2019-09-08 00:59:48,905 INFO  [master/hbase-docker:16000:becomeActiveMaster] master.ServerManager: Finished waiting on RegionServer count=1; waited=4528ms, expected min=1 server(s), max=NO_LIMIT server(s), master is running
+2019-09-08 00:59:48,932 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
+2019-09-08 00:59:49,938 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
+2019-09-08 00:59:50,911 INFO  [RS:0;hbase-docker:16020] wal.AbstractFSWAL: WAL configuration: blocksize=64 MB, rollsize=32 MB, prefix=hbase-docker%2C16020%2C1567904377562, suffix=, logDir=file:/data/hbase/WALs/hbase-docker,16020,1567904377562, archiveDir=file:/data/hbase/oldWALs
+2019-09-08 00:59:51,125 INFO  [RS:0;hbase-docker:16020] wal.AbstractFSWAL: New WAL /data/hbase/WALs/hbase-docker,16020,1567904377562/hbase-docker%2C16020%2C1567904377562.1567904390983
+2019-09-08 00:59:51,939 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
+2019-09-08 00:59:54,212 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.1:59976
+2019-09-08 00:59:54,220 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to establish new session at /172.17.0.1:59976
+2019-09-08 00:59:54,247 INFO  [SyncThread:0] server.ZooKeeperServer: Established session 0x16d0e61da8a0005 with negotiated timeout 40000 for client /172.17.0.1:59976
+2019-09-08 00:59:55,940 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
+2019-09-08 00:59:58,001 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x16d0e51cc3c0005, timeout of 40000ms exceeded
+2019-09-08 00:59:58,001 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x16d0e51cc3c0005
+2019-09-08 01:00:03,941 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
+2019-09-08 01:00:19,941 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
+2019-09-08 01:00:42,123 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x16d0e61da8a0002
+2019-09-08 01:00:42,161 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x7399f925] zookeeper.ZooKeeper: Session: 0x16d0e61da8a0002 closed
+2019-09-08 01:00:42,161 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x7399f925-EventThread] zookeeper.ClientCnxn: EventThread shut down for session: 0x16d0e61da8a0002
+2019-09-08 01:00:42,168 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:56570 which had sessionid 0x16d0e61da8a0002
+2019-09-08 01:00:43,117 WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x16d0e61da8a0005, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:239)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:203)
+	at java.lang.Thread.run(Thread.java:748)
+2019-09-08 01:00:43,123 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.1:59976 which had sessionid 0x16d0e61da8a0005
+2019-09-08 01:00:44,085 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x16d0e61da8a0003
+2019-09-08 01:00:44,105 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x1e7842ad] zookeeper.ZooKeeper: Session: 0x16d0e61da8a0003 closed
+2019-09-08 01:00:44,105 INFO  [ReadOnlyZKClient-hbase-docker:2181@0x1e7842ad-EventThread] zookeeper.ClientCnxn: EventThread shut down for session: 0x16d0e61da8a0003
+2019-09-08 01:00:44,106 WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x16d0e61da8a0003, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:239)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:203)
+	at java.lang.Thread.run(Thread.java:748)
+2019-09-08 01:00:44,107 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:56572 which had sessionid 0x16d0e61da8a0003
+2019-09-08 01:00:51,942 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
+2019-09-08 01:01:18,000 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x16d0e61da8a0005, timeout of 40000ms exceeded
+2019-09-08 01:01:18,000 INFO  [ProcessThread(sid:0 cport:2181):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x16d0e61da8a0005
+2019-09-08 01:01:55,943 WARN  [master/hbase-docker:16000:becomeActiveMaster] master.HMaster: hbase:meta,,1.1588230740 is NOT online; state={1588230740 state=OPEN, ts=1567904383102, server=hbase-docker,16020,1567708918517}; ServerCrashProcedures=true. Master startup cannot progress, in holding-pattern until region onlined.
