@@ -1,10 +1,11 @@
 package br.com.claro.hbase.exposicao.service;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.client.Get;
@@ -12,21 +13,63 @@ import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.Table;
 import org.apache.hadoop.hbase.regionserver.NoSuchColumnFamilyException;
 import org.apache.hadoop.hbase.util.Bytes;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import br.com.claro.hbase.exposicao.enums.MensagemResponseEnum;
 import br.com.claro.hbase.exposicao.vo.FamiliaVo;
 import br.com.claro.hbase.exposicao.vo.GetResponseVo;
+import io.github.resilience4j.circuitbreaker.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.RateLimiter;
+import io.github.resilience4j.ratelimiter.RateLimiterConfig;
+import io.github.resilience4j.retry.Retry;
+import io.vavr.control.Try;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Service
 public class HbaseGetService extends HbaseService{
 
-	private static final Logger logger = LoggerFactory.getLogger(HbaseGetService.class);	
+	private static final Logger logger = LogManager.getLogger(HbaseGetService.class);	
 	
+	private CircuitBreaker circuitBreaker; 
+	private Retry retry;
+	private RateLimiter rateLimiter;
+	
+	public HbaseGetService() {
+		circuitBreaker = CircuitBreaker.ofDefaults("serviceGetHbase");	
+		retry = Retry.ofDefaults("serviceGetHbase");	
+		rateLimiter = RateLimiter.of("serviceGetHbase",  RateLimiterConfig.custom()
+			    .timeoutDuration(Duration.ofMillis(100))
+			    .limitRefreshPeriod(Duration.ofSeconds(1))
+			    .limitForPeriod(1)
+			    .build());
+
+	}
+			
 	public GetResponseVo get(String id){
-		return this.get(id,null);
+		return this.get(id, null);
+	}
+	
+	public GetResponseVo get(String id, String familiasColunas){
+		
+		Supplier<GetResponseVo> supplier = ()->this.start(id, familiasColunas);	
+		
+		Supplier<GetResponseVo> decoratedSupplier = CircuitBreaker
+			    .decorateSupplier(circuitBreaker, supplier);
+		
+		decoratedSupplier = Retry.decorateSupplier(retry, decoratedSupplier);
+		
+		decoratedSupplier =  RateLimiter.decorateSupplier(rateLimiter, decoratedSupplier);
+		
+		return Try.ofSupplier(decoratedSupplier)
+			    .recover(throwable -> erro()).get();
+		
+		//return circuitBreaker.executeSupplier( ()->this.start(id, familiasColunas) );	
+		
+	}
+	
+	private GetResponseVo erro() {
+		return new GetResponseVo(MensagemResponseEnum.FALHA_HBASE_GET);
 	}
 	
 	/**
@@ -34,7 +77,7 @@ public class HbaseGetService extends HbaseService{
 	 * @param familiasColunas
 	 * @return
 	 */
-	public GetResponseVo get(String id, String familiasColunas){
+	private GetResponseVo start(String id, String familiasColunas){
 		
 		HashMap<String, FamiliaVo> dados = new HashMap<>();
 		Table tabela = null;

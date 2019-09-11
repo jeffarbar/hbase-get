@@ -1,6 +1,6 @@
 FROM jeffersonfarias/ubuntu-jdk8
 
-MAINTAINER Jefferson Farias
+LABEL author="Jefferson Farias"
 
 WORKDIR /
 
@@ -16,4 +16,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 EXPOSE 1191
 
-CMD ["java -jar hbaseGet.jar"]
+#ENTRYPOINT ["/usr/bin/java","-jar"]
+
+#CMD ["hbaseGet.jar"]
+

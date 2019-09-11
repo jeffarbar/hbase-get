@@ -53,19 +53,18 @@ public class HBaseConfig {
 				
 				this.config.set("hadoop.security.authentication", "kerberos");
 				this.config.set("hbase.security.authentication", "kerberos");
-
-				this.config.set("hadoop.security.authentication", "kerberos");
-				this.config.set("hbase.security.authentication", "kerberos");
-							
-				this.config.set("hbase.regionserver.kerberos.principal", kerberosMasterPrincipal); //qual o principal do mestre / região. uso de servidores
-				this.config.set("hbase.regionserver.keytab.file", keyTab);
 				
-				this.config.set("hbase.master.kerberos.principal", kerberosRegionserverPrincipal );// isso é necessário mesmo se você se conectar através de rpc / zookeeper
-				this.config.set("hbase.master.keytab.file", keyTab);
-				
+				if( kerberosMasterPrincipal != null && !"".equals(kerberosMasterPrincipal.trim()) ) {
+					this.config.set("hbase.regionserver.kerberos.principal", kerberosMasterPrincipal); //qual o principal do mestre / região. uso de servidores
+				}
+				if( kerberosRegionserverPrincipal != null && !"".equals(kerberosRegionserverPrincipal.trim()) ) {
+					this.config.set("hbase.master.kerberos.principal", kerberosRegionserverPrincipal );// isso é necessário mesmo se você se conectar através de rpc / zookeeper
+				}
+				if( keyTab != null && !"".equals(keyTab.trim()) ) {
+					this.config.set("hbase.regionserver.keytab.file", keyTab);
+					this.config.set("hbase.master.keytab.file", keyTab);
+				}
 
-				//System.setProperty("java.security.krb5.conf","src/krb5.conf");
-				// Enable/disable krb5 debugging 
 				System.setProperty("sun.security.krb5.debug", String.valueOf(isKerberosDebug));
 
 			}
