@@ -1,0 +1,19 @@
+resilience4j.circuitbreaker:
+  backends:
+    default:
+      ringBufferSizeInClosedState: 3
+      ringBufferSizeInHalfOpenState: 3
+      waitInterval: 1000
+      failureRateThreshold: 20
+    serviceGetHbase:
+      ringBufferSizeInClosedState: 2
+      ringBufferSizeInHalfOpenState: 2
+      waitInterval: 1000
+      failureRateThreshold: 50
+
+####  PARAMETROS DO RESILIENCE4J
+ 
+#ringBufferSizeInClosedState : O tamanho do buffer de anel quando o CircuitBreaker é fechado
+#ringBufferSizeInHalfOpenState : O tamanho do buffer de anel quando o CircuitBreaker está meio aberto
+#waitInterval : a duração da espera em milis, que define por quanto tempo o CircuitBreaker deve #permanecer aberto antes de mudar para meio aberto
+#failRateThreshold : o limite da taxa de falhas acima do qual o CircuitBreaker abre e inicia #chamadas de curto-circuito
