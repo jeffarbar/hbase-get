@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 
-	@Value("${swagger.base.package}")
+	@Value("${swagger.package}")
 	private String basePackage;
 	
 	@Bean

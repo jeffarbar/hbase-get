@@ -1,22 +1,14 @@
-FROM jeffersonfarias/ubuntu-jdk8
+FROM openjdk:8-jre-slim
 
 LABEL author="Jefferson Farias"
 
-WORKDIR /
-
-RUN mkdir -p /app/
-
-RUN chmod 755 -R /app/
+USER nobody
 
 ADD /target/*.jar /app/hbaseGet.jar
 
-RUN chmod 755 -R /app/hbaseGet.jar
+WORKDIR /app
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+CMD ["java","-jar","/app/hbaseGet.jar"]
 
 EXPOSE 1191
-
-#ENTRYPOINT ["/usr/bin/java","-jar"]
-
-#CMD ["hbaseGet.jar"]
 

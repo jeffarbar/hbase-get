@@ -1,6 +1,6 @@
 #!/bin/bash
 
-versao_dev=1.0.1
+versao_dev=1.0.0
 nome_imagem=jeffersonfarias/hbaseget
 
 

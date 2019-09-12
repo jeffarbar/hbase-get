@@ -20,11 +20,6 @@
 	</properties>
 
   	<dependencies>
-	    <dependency>
-	      <groupId>junit</groupId>
-	      <artifactId>junit</artifactId>
-	      <scope>test</scope>
-	    </dependency>
   
   		<!-- spring boot -->
   		<dependency> 
@@ -36,7 +31,12 @@
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>         
+        </dependency> 
+        <dependency> 
+        	<groupId>org.springframework.boot</groupId> 
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>teste</scope> 
+        </dependency>            
 
 		<!-- log4j2 -->
 		<dependency>
@@ -60,12 +60,8 @@
 		    <artifactId>resilience4j-spring-boot2</artifactId>
 		    <version>${resilience4j.version}</version>
 		</dependency>
-		<!--  
-		<dependency>
-		    <groupId>io.github.resilience4j</groupId>
-		    <artifactId>resilience4j-circuitbreaker</artifactId>
-		    <version>${resilience4j.version}</version>
-		</dependency>
+		 
+		 <!--
 		<dependency>
 		    <groupId>io.github.resilience4j</groupId>
 		    <artifactId>resilience4j-retry</artifactId>

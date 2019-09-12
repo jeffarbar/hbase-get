@@ -29,8 +29,8 @@ public class HBaseConfig {
 	@Value("${kerberos.rpc.protection}")
 	private String kerberosRpcProtection;
 	
-	@Value("${kerberos.key.tab}")
-	private String keyTab;
+	@Value("${kerberos.keytab.file}")
+	private String keyTabFile;
 	
 	@Value("${hbase.cluster.distributed}")
 	private boolean isHbaseClusterDistributed;
@@ -60,9 +60,9 @@ public class HBaseConfig {
 				if( kerberosRegionserverPrincipal != null && !"".equals(kerberosRegionserverPrincipal.trim()) ) {
 					this.config.set("hbase.master.kerberos.principal", kerberosRegionserverPrincipal );// isso é necessário mesmo se você se conectar através de rpc / zookeeper
 				}
-				if( keyTab != null && !"".equals(keyTab.trim()) ) {
-					this.config.set("hbase.regionserver.keytab.file", keyTab);
-					this.config.set("hbase.master.keytab.file", keyTab);
+				if( keyTabFile != null && !"".equals(keyTabFile.trim()) ) {
+					this.config.set("hbase.regionserver.keytab.file", keyTabFile);
+					this.config.set("hbase.master.keytab.file", keyTabFile);
 				}
 
 				System.setProperty("sun.security.krb5.debug", String.valueOf(isKerberosDebug));

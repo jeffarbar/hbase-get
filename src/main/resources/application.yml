@@ -1,19 +1,104 @@
+spring:
+  application.name: hbaseGet 
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: -1
+      max-request-size: -1
+      file-size-threshold: -1           
+server:
+  port: 1191
+  servlet:
+    contextPath: /hbase
+
+hbase:
+  zk:
+    host: brux1688.claro.com.br,brux1689.claro.com.br,brux1690.claro.com.br
+    port: 2181
+  tabela: BUB_CEC_NBANBO_VISAO_DE
+  cluster:
+    distributed: true
+
+swagger:
+  package: br.com.claro.hbase.exposicao.controller 
+
+kerberos:
+  security: false
+  debug: true
+  master:
+    principal: hbase/_HOST@YOUR-REALM.COM
+  regionserver:
+    principal: hbase/_HOST@YOUR-REALM.COM
+  rpc:
+    protection: authentication
+  keytab: 
+    user: user
+    file: hbase.service.keytab
+
+# resilience4j
 resilience4j.circuitbreaker:
   backends:
-    default:
-      ringBufferSizeInClosedState: 3
-      ringBufferSizeInHalfOpenState: 3
-      waitInterval: 1000
-      failureRateThreshold: 20
-    serviceGetHbase:
-      ringBufferSizeInClosedState: 2
-      ringBufferSizeInHalfOpenState: 2
-      waitInterval: 1000
-      failureRateThreshold: 50
+    ratings-data-service-circuitbreaker:
+      registerHealthIndicator: true
+      # The Ring Bit Buffer must be full, before the failure rate can be calculated. For example, if the size of the Ring Buffer is 10, then at least 10 calls must evaluated, before the failure rate can be calculated
+      ringBufferSizeInClosedState: 5 # the size of the ring buffer when the CircuitBreaker is closed
+      ringBufferSizeInHalfOpenState: 3 # the size of the ring buffer when the CircuitBreaker is half open
+      waitDurationInOpenState: 5000 # the wait duration which specifies how long the CircuitBreaker should stay open, before it switches to half open
+      failureRateThreshold: 10 # the failure rate threshold in percentage above which the CircuitBreaker should trip open and start short-circuiting calls
+      eventConsumerBufferSize: 10 # The size of a event consumer buffer can be configured per CircuitBreaker
+      #ignoreExceptions: #  list of exceptions which should be ignored and not increase failure count
+      #- io.github.robwin.exception.BusinessException
+      #recordExceptions: # a list of exceptions which should increase failure count
+      #- java.util.concurrent.TimeoutException 
+    hbase-get-service-circuitbreaker:
+      registerHealthIndicator: true
+      # The Ring Bit Buffer must be full, before the failure rate can be calculated. For example, if the size of the Ring Buffer is 10, then at least 10 calls must evaluated, before the failure rate can be calculated
+      ringBufferSizeInClosedState: 5 # the size of the ring buffer when the CircuitBreaker is closed
+      ringBufferSizeInHalfOpenState: 3 # the size of the ring buffer when the CircuitBreaker is half open
 
-####  PARAMETROS DO RESILIENCE4J
- 
-#ringBufferSizeInClosedState : O tamanho do buffer de anel quando o CircuitBreaker é fechado
-#ringBufferSizeInHalfOpenState : O tamanho do buffer de anel quando o CircuitBreaker está meio aberto
-#waitInterval : a duração da espera em milis, que define por quanto tempo o CircuitBreaker deve #permanecer aberto antes de mudar para meio aberto
-#failRateThreshold : o limite da taxa de falhas acima do qual o CircuitBreaker abre e inicia #chamadas de curto-circuito
+      waitDurationInOpenState: 5000 # the wait duration which specifies how long the CircuitBreaker should stay open, before it switches to half open
+
+      failureRateThreshold: 50 # the failure rate threshold in percentage above which the CircuitBreaker should trip open and start short-circuiting calls
+      eventConsumerBufferSize: 10 # The size of a event consumer buffer can be configured per CircuitBreaker
+      #ignoreExceptions: #  list of exceptions which should be ignored and not increase failure count
+      #- io.github.robwin.exception.BusinessException
+      #recordExceptions: # a list of exceptions which should increase failure count
+      #- java.util.concurrent.TimeoutException        
+resilience4j.retry:
+   backends:
+     ratings-data-service-retry:
+       maxRetryAttempts: 1
+       waitDuration: 100
+       #retryExceptions:
+       #    - org.springframework.web.client.HttpServerErrorException
+       #ignoreExceptions:
+       #    - io.github.robwin.exception.BusinessException
+     hbase-get-service-retry:
+       maxRetryAttempts: 1
+       waitDuration: 100
+       #retryExceptions:
+       #    - org.springframework.web.client.HttpServerErrorException
+
+       #ignoreExceptions:
+       #    - io.github.robwin.exception.BusinessException
+
+resilience4j.bulkhead:
+  backends:
+    ratings-data-service-bulkhead:
+      maxConcurrentCall: 10 # max amount of parallel executions allowed by the bulkhead
+    hbase-get-service-bulkhead:
+      maxConcurrentCall: 10 # max amount of parallel executions allowed by the bulkhead
+                                  
+resilience4j.ratelimiter:
+  limiters:
+    ratings-data-service-ratelimiter:
+      registerHealthIndicator: true
+      limit-refresh-period-in-millis: 1 # the period of limit refresh, after each period rate limiter sets its permissions count to limitForPeriod value
+      limit-for-period: 10 # the permissions limit for refresh period
+      timeout-in-millis: 25 # the default wait for permission duration
+    hbase-get-service-ratelimiter:
+      registerHealthIndicator: true
+      limit-refresh-period-in-millis: 1 # the period of limit refresh, after each period rate limiter sets its permissions count to limitForPeriod value
+      limit-for-period: 10 # the permissions limit for refresh period
+      timeout-in-millis: 25 # the default wait for permission duration
+

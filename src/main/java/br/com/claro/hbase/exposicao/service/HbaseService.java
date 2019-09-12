@@ -1,6 +1,5 @@
 package br.com.claro.hbase.exposicao.service;
 
-import java.io.IOException;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.TableName;
@@ -14,9 +13,7 @@ import org.springframework.stereotype.Component;
 
 import br.com.claro.hbase.exposicao.conf.HBaseConfig;
 
-
-
-@Component
+@Component(value = "hbaseService")
 public class HbaseService {
 
 	@Value("${hbase.tabela}")
@@ -25,8 +22,8 @@ public class HbaseService {
 	@Value("${kerberos.master.principal}")
 	private String kerberosMasterPrincipal;
 	
-	@Value("${kerberos.user.keytab}")
-	private String kerberosUserKeyTab;
+	@Value("${kerberos.keytab.user}")
+	private String kerberosKeyTabUser;
 	
 	@Value("${kerberos.security}")
 	private boolean isKerberos;
@@ -39,7 +36,7 @@ public class HbaseService {
 	
 	private UserGroupInformation ugi;
 	
-	private void iniciaConexao() throws IOException{
+	private void iniciaConexao() throws Exception{
 
 		if( connection == null || connection.isClosed() ){
 			Configuration conf = hBaseConfig.ini();
@@ -49,7 +46,7 @@ public class HbaseService {
 		
 		if(this.isKerberos) {
 			if( ugi == null || ugi.isInitialized() ) {
-				ugi = UserGroupInformation.loginUserFromKeytabAndReturnUGI(kerberosMasterPrincipal, kerberosUserKeyTab);
+				ugi = UserGroupInformation.loginUserFromKeytabAndReturnUGI(kerberosMasterPrincipal, kerberosKeyTabUser);
 			}else {
 				ugi.reloginFromKeytab();
 			}
